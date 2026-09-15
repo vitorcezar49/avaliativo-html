@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login app</title>
+    <!-- tailwind via CDN-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fef2f2',
+                            100: '#fee2e2',
+                            500: '#ef4444',
+                            600: '#dc2625',
+                            700: '#b91c1c',
+                            900: '#7f1d1d'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="min-h-screen bg-[#0b0f19] flex items-center justify-center p-4 selection:bg-red-500 selection:text-white relative overflow-x-hidden">
+    
+    <!-- Tons de luz de fundo -->
+    <div class="fixed top-[-10%] left-[-10%] w-[45rem] h-[45rem] bg-yellow-600/15 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+    <div class="fixed bottom-[-10%] right-[-10%] w-[45rem] h-[45rem] bg-green-600/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+
+    <!-- Container Principal Centralizado -->
+    <main class="w-full max-w-md my-8 flex flex-col items-center">
+        
+        <!-- logo e Titulos -->
+        <header class="text-center mb-8 flex flex-col items-center">
+            <!-- Logo em formato de livro -->
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-xl bg-gradient-to-br from-yellow-600 to-yellow-800 text-white shadow-xl shadow-red-950/50 mb-4 border border-red-500/30 relative">
+                <!-- icone de Livro aberto -->
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://w3.org">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                </svg>
+            </div>
+            
+            <h1 class="text-3xl font-extrabold text-white tracking-tight font-heading">
+                Text<span class="text-yellow-400">Vdia</span>
+            </h1>
+            <p class="text-sm text-gray-400 mt-2 max-w-xs">
+                Plataforma de alugar livros e videos
+            </p>
+        </header>
+
+        <!--Login -->
+        <div class="w-full bg-[#111827]/60 backdrop-blur-xl border border-gray-800 p-8 rounded-2xl shadow-2xl">
+            <form class="space-y-5">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-300 mb-1.5">E-mail</label>
+                    <input type="email" id="email" required
+                        class="w-full px-4 py-3 bg-[#1f2937]/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all" 
+                        placeholder="seu@email.com">
+                </div>
+                  <!--local de colocar a senha-->
+                <div>
+                    <div class="flex justify-between items-center mb-1.5">
+                        <label for="password" class="text-sm font-medium text-gray-300">Senha</label>
+                        <a href="#" class="text-xs text-green-400 hover:text-yellow-300 transition-colors">Esqueceu a senha?</a>
+                    </div>
+                    <input type="password" id="password" required
+                        class="w-full px-4 py-3 bg-[#1f2937]/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all" 
+                        placeholder="••••••••">
+                </div>
+                  <!--Botão de entrar na plataforma-->
+                <button type="submit" 
+                    class="w-full py-3 px-4 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-yellow-600 text-white font-medium rounded-xl shadow-lg shadow-yellow-950/30 transition-all transform active:scale-[0.98]">
+                    Entrar na plataforma
+                </button>
+            </form>
+
+            <!-- botão de cadastrar se não tiver conta-->
+            <div class="mt-6 text-center text-sm text-gray-400">
+                Não tem uma conta? 
+                <a href="#" class="text-blue-400 hover:text-blue-300 font-medium transition-colors">Cadastre-se</a>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>
